@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
-app.set('views', './component/nav');
+app.set('component', './src/component');
 app.use(express.static('./src/public'));
 // app.use('/', routes);
 
