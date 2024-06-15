@@ -17,6 +17,9 @@ app.set('views', './src/views');
 app.set('component', './src/component');
 app.use(express.static('./src/public'));
 // app.use('/', routes);
+// app.get('/write',(req,res)=>{
+//     res.render('write')
+// })
 
 connectDB()
 .then(()=>{
