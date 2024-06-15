@@ -12,6 +12,11 @@ const port = 3000|| process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.set('view engine', 'ejs');
+app.set('views', './src/views');
+app.use(express.static('./src/public'));
+// app.use('/', routes);
+
 connectDB()
 .then(()=>{
     app.listen(port, ()=>{
